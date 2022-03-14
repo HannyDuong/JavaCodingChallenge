@@ -1,8 +1,3 @@
-/* 
-Find
-
-*/
-
 public class LeapYear {
     public static int findLeapYear(String str){
         int nextLeapY = 0;
