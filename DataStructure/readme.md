@@ -12,7 +12,7 @@
 	Arrays, Linked List, Stack, Queue
 	Binary Tree, Binary Search Tree
 	Heap, Hashing, Graph, Matrix
-	&nbsp
+	
 	
 ##### What are the two main types of data structure or 
 ##### Describe the types of data structure?  
