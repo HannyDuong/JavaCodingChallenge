@@ -4,7 +4,7 @@
 	&nbsp
 	
 ###### What is the use of data structure?  
-	To hold data 
+	To hold data
 	&nbsp
 	
 ###### What are the topics in data structure or  
@@ -15,7 +15,7 @@
 	&nbsp
 	
 ###### What are the two main types of data structure or   
-   Describe the types of data structure?  
+###### Describe the types of data structure?  
    * Linear data structure:   
 		* Elements are arranged in the sequential order and are stored in non hierarchical way 
 		  where each item has the successor and predecessors except the first and last item.
