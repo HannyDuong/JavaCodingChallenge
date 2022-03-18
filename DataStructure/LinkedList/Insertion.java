@@ -25,6 +25,7 @@ public class Insertion {
         2. set the pointer of the new node equals to head
         3. set head point to new node
         Time Complexity: O(1)
+
     */
 
     public void push(int data){
@@ -51,8 +52,31 @@ public class Insertion {
     }
 
     /* Insert at the end of the list
+        1. Allocate a new node memory and put the new data in the node
+        2. if head == null then newNode == head and return
+        3. Traverse throught the list to find the last node
+        4. Set newNode pointer == null
+        5. Set last pointer == newNode
+        Time Complexity: O(n)
     
     */
+
+    public void InsertLast(int data ){
+        Node new_node = new Node(data);
+        if(head == null){
+            head = new_node;
+            return;
+        }
+        Node temp = head;
+        
+        while(temp.next !=null){
+            temp = temp.next;
+
+        }
+        new_node.next = null;
+        temp.next = new_node;
+        return;
+    }
 
     public void printList(){
         Node temp = head;
@@ -70,8 +94,11 @@ public class Insertion {
         list.printList();
         System.out.println();
 
-        list.InsertAfter(8, list.head.next.next.next);
+        list.InsertAfter(8, list.head.next);
         System.out.print("Insert After method: ");
+        list.printList();
+        list.InsertLast(10);
+        System.out.print("Insert End method: ");
         list.printList();
 
     }
