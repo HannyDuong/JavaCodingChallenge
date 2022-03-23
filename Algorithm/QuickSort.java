@@ -1,9 +1,17 @@
 /* 
+Reference: https://www.geeksforgeeks.org/quick-sort/
 Sorting an array using QuickSort algorithm
 The method takes an array, the lowest index and the highest index of the array as input
 Approach:
 1. The array has at leat 1 element
-2. Pick the last element as the pivot
+2. Find the pivot by partition the array
+3. Recursively call the qsort method to sort the arrays that are less than the pivot and greater than the pivot
+    * Partition the array
+        * Pick the last element as the pivot
+        * If the current element less than the pivot, 
+        * swap the current element with the predecessor element
+        * swap the pivot with the first element that is greater than pivot, that is i + 1
+
 
  */
 
@@ -11,8 +19,6 @@ package Algorithm;
 import java.util.Arrays;
 
 public class QuickSort {
-    // the method takes an array, the lowest index and the highest index of 
-    // the array as inputs
     public static void qsort(int[]arr, int low, int high){
         //array has at least one element
         if(low < high){
@@ -26,9 +32,6 @@ public class QuickSort {
         int pivot = arr[high];
         int i = low -1;
         for(int j = low; j < arr.length; j++){
-            // if the current element less than the pivot,
-            // increment the index i , and then swap the current element 
-            // with the predecessor element
             if(arr[j] < pivot){
                 i++;
                 swap(arr,i, j);
