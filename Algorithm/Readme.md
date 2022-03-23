@@ -36,4 +36,4 @@
 		* Worse case: O(n^2)
 	* QuickSort is popular for sorting large input arrays and works faster than MergeSort for smaller datasets.
 	
-	![Running Times](images/running times of sorting algorithm.png)
+	![Running Times](/running times of sorting algorithm.png)
