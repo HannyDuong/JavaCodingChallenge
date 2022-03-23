@@ -35,5 +35,16 @@
 		* Average: O(nlgn)
 		* Worse case: O(n^2)
 	* QuickSort is popular for sorting large input arrays and works faster than MergeSort for smaller datasets.
+
+
+#### What is comparison sort?
+	* Comparison sort determin the sorted order of an input array by comparing eleemnts.
+	* Examples: Insertion sort, merge sort, heapsort, and quicksort
+
+#### What is divide-and-conquer?
+	* Divide-and-conquer is an algorithm of solving a large problem by
+		* Step 1: Dividing the problem into smaller subproblems
+		* Step 2: Solving the subproblems recursively if needed, and
+		* Step 3: Combining the solutions of steps 2 to get the desired output.
 	
 ![Running Times](/Algorithm/images/runningtimesofsortingalgorithm.png)
