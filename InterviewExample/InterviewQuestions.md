@@ -27,3 +27,7 @@
         * However, Python performance is slower than java.
 
     * Reference: https://www.javatpoint.com/which-is-better-java-or-python
+
+ ####  What is recursion?
+    * The process in which a function calls itself directly or indirectly
+    is called recursion.
