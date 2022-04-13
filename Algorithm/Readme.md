@@ -20,7 +20,7 @@
 	* When  2<n<= 43 , insertion sort beat merge sort
 	* Calculating : https://atekihcan.github.io/CLRS/01/E01.02-02/
 	
-#### What is QuickSort	algorithm?
+#### What is QuickSort algorithm?
 	* Like MergeSort, QuickSort is a Divide and Conquer algorithm.
 	* It picks an element as pivot and partitions the given array around the picked pivot.
 	* Such as: elements less than pivot, pivot, and then elements greater than pivot
@@ -38,7 +38,7 @@
 
 
 #### What is comparison sort?
-	* Comparison sort determin the sorted order of an input array by comparing eleemnts.
+	* Comparison sort determine the sorted order of an input array by comparing elements.
 	* Examples: Insertion sort, merge sort, heapsort, and quicksort
 
 #### What is divide-and-conquer?
