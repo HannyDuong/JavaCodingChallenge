@@ -21,24 +21,52 @@ You can return the answer in anyorder
 import java.util.*;
 
 public class Test{
-	public static float[] addTo(float[] nums, float target){
-		Map<Float, Integer> map = new HashMap<>();
-		float[] results = new float[2];
-		for(int i = 0; i < nums.length; i++){
-			if(map.containsKey(nums[i])){
-				results[0] = i;
-				results[1] = (int) map.get(nums[i]);
-			}
-			map.put(target - nums[i], i);
-		}
-		
-		return results;
+	public  List<String> removeComments(String[] source) {
+        List res = new ArrayList<>();
+boolean commented = false;
+ StringBuilder sb = new StringBuilder();
+       // String temp = "";
+for (String line : source) {
+    for (int i = 0; i < line.length(); i++) {
+        if (commented) {
+            if (line.charAt(i) == '*' && i < line.length()-1 && line.charAt(i+1) == '/') {
+                commented = false;
+                i++;
+            }
+        }
+        else {
+            if (line.charAt(i) == '/' && i < line.length()-1 && line.charAt(i+1) == '*') {
+                commented = true;
+                i++;
+            }
+            else if (line.charAt(i) == '/' && i < line.length()-1 && line.charAt(i+1) == '/') {
+                break;
+            }
+            else {
+                 sb.append(line.charAt(i));
+               // temp = temp + line.charAt(i);
+            }
+        }
+    }
+     if (!commented && sb.length() != 0) {
+    //if(!commented && temp.length() !=0){
+    res.add(sb.toString());
+      //  res.add(temp);
+     //  temp = "";
+     sb = new StringBuilder();
+}
+    
+    
+    
+}
+return res;
 	}
-	  public static void main(String [] args){
-		  float [] nums = {5.0f, 2.0f, 7.0f, 3.0f};
-		  float target = 9.0f;
-		  float[] results = addTo(nums, target);
-		  System.out.println(Arrays.toString(results));
+	public static void main(String[] args){
+        String[] source = { "/*Test program */", "int main()", "{ ", "  // variable declaration ", "int a, b, c, d, h, h, v, t,l, m,n, , f, r, o, p;", "/* This is a test", "   multiline  ", " comment for ", "   testing */", "a = b + c;", "}"};
+       Test test= new Test();
+		
+		//test.removeComments(source);
+		System.out.println(test.removeComments(source));
 
   }
 }

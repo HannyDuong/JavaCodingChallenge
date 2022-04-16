@@ -7,6 +7,7 @@ Input: matrix = [[1,2,3], [4,5,6], [7,8,9]]
 Output: [1,2,3,6,9,8,7,4,5]
 
 Approach:
+
 * Iterate through all the cell of the matrix.
 * Starting at the top left corner of the matrix,
 prints encountered elements in a clockwise manner.
@@ -23,8 +24,23 @@ prints encountered elements in a clockwise manner.
         * Index will be the same when approaching to the bottom.
         * Index will be be decreased 1 when approaching to the left.
         * Index will be the same when approaching to the top.
-        * So rowdirection = [1, 0, -1, 0] 
+        * So coldirection = [1, 0, -1, 0] 
 
+    for each element in the matrix of m x n elements
+        add the element at current row and column to a List
+        mark it as already visit
+        next row element = current row element + position of the next row element
+        next col element = current col element + position of the next col element
+        if next row and col elements >=0 and < length of rows and columns and not visited,
+            current row element = next row element
+            current col element = next col element
+        else (when reaching the border- when next row and col element > rows and columns length-
+                change the direction)
+            direction = direction + 1 % 4;
+            current row element = current row element +rowdirection[direction]
+            current col element = current col element + coldirection[direction]
+    return list
+            
 Reference:
     *  https://leetcode.com/problems/spiral-matrix/
     *  https://www.geeksforgeeks.org/print-a-given-matrix-in-spiral-form/
