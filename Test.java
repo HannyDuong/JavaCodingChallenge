@@ -21,53 +21,37 @@ You can return the answer in anyorder
 import java.util.*;
 
 public class Test{
-	public  List<String> removeComments(String[] source) {
-        List res = new ArrayList<>();
-boolean commented = false;
- StringBuilder sb = new StringBuilder();
-       // String temp = "";
-for (String line : source) {
-    for (int i = 0; i < line.length(); i++) {
-        if (commented) {
-            if (line.charAt(i) == '*' && i < line.length()-1 && line.charAt(i+1) == '/') {
-                commented = false;
-                i++;
-            }
+    public void printAlSubstrings(String s){
+        int size = s.length();
+       // System.err.println(size);
+        for(int i = 0; i< size ; i ++){
+            for(int j = i+1; j <= size ; j++){
+            System.out.println(s.substring(i, j));
+           
         }
-        else {
-            if (line.charAt(i) == '/' && i < line.length()-1 && line.charAt(i+1) == '*') {
-                commented = true;
-                i++;
-            }
-            else if (line.charAt(i) == '/' && i < line.length()-1 && line.charAt(i+1) == '/') {
-                break;
-            }
-            else {
-                 sb.append(line.charAt(i));
-               // temp = temp + line.charAt(i);
-            }
-        }
+         
     }
-     if (!commented && sb.length() != 0) {
-    //if(!commented && temp.length() !=0){
-    res.add(sb.toString());
-      //  res.add(temp);
-     //  temp = "";
-     sb = new StringBuilder();
-}
     
-    
-    
-}
-return res;
-	}
-	public static void main(String[] args){
-        String[] source = { "/*Test program */", "int main()", "{ ", "  // variable declaration ", "int a, b, c, d, h, h, v, t,l, m,n, , f, r, o, p;", "/* This is a test", "   multiline  ", " comment for ", "   testing */", "a = b + c;", "}"};
-       Test test= new Test();
-		
-		//test.removeComments(source);
-		System.out.println(test.removeComments(source));
+    }
 
-  }
-}
 
+    class box{
+        int width;
+        int he;
+        int le;
+
+    }
+    public static void main(String[] args) {
+        String str = "abc";
+        Test test = new Test();
+        test.printAlSubstrings(str);
+    //    box ob1 = new box();
+    //    box ob2 = new box();
+    //    ob1.he = 1;
+    //    ob1.le = 2;
+    //    ob1.width = 1;
+    //    ob2 = ob1;
+    //    System.out.println(ob2.he);
+
+    }
+}

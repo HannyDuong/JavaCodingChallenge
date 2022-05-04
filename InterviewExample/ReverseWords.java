@@ -25,7 +25,7 @@ Approach:
 package InterviewExample;
 
 public class ReverseWords {
-    public static String reverseWords(String s){
+    public String reverseWords(String s){
         if(s == null) return null;
         String revString = " ";
         String [] array = s.split(" +");
